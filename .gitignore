@@ -1,3 +1,6 @@
 tmp/
 snowplow-enrich.sublime-project
 snowplow-enrich.sublime-workspace
+node_modules
+node_modules/*
+npm_debug.log
