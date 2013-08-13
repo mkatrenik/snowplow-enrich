@@ -1,7 +1,7 @@
 {
   "name": "snowplow-enrich",
   "version": "0.0.1",
-  "description": "data source parsers / event enrichments module for snowplow analytic",
+  "description": "event enrichments module for snowplow analytics",
   "main": "index.js",
   "scripts": {
     "test": "make test"
@@ -15,10 +15,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.12.0",
-    "event-stream": "~3.0.16"
+    "mocha": "~1.12.0"
   },
   "dependencies": {
+    "event-stream": "~3.0.16",
     "debug": "~0.7.2",
     "lodash": "~1.3.1",
     "range_check": "0.0.4"
