@@ -1,5 +1,5 @@
 
-var Enricher = require('..')
+var enrich = require('..')
   , CanonicalInput = require('..').CanonicalInput
   , fs = require('fs')
   , es = require('event-stream')
@@ -15,8 +15,7 @@ es.pipeline(
   es.split(),
   es.parse(), // JSON.parse
   es.map(function (data, callback) {
-    var enricher = new Enricher(new CanonicalInput(data))
-    var e = enricher.enrich()
+    var e = enrich(new CanonicalInput(data))
 
     var out = util.format("%s (%s)", e.page_url, e.event)
     callback(null, out)
