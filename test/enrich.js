@@ -22,5 +22,10 @@ describe('when enriching CanonicalInput', function(){
       assert(e.event == 'page_view')
       assert(e.app_id == 'example.com')
     })
+    it('should work with any object matching interface', function(){
+      var e = enrich(fixtures)
+      assert(e.event == 'page_view')
+      assert(e.app_id == 'example.com')
+    })
   })
 })

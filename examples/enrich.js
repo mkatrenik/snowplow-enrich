@@ -15,7 +15,7 @@ es.pipeline(
   es.split(),
   es.parse(), // JSON.parse
   es.map(function (data, callback) {
-    var e = enrich(new CanonicalInput(data))
+    var e = enrich(data)
 
     var out = util.format("%s (%s)", e.page_url, e.event)
     callback(null, out)
