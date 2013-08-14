@@ -1,3 +1,3 @@
 
-exports = module.exports = require('./lib/enricher')
+exports = module.exports = require('./lib/enrich')
 exports.CanonicalInput = require('./lib/canonicalInput')

@@ -1,6 +1,6 @@
 
 var assert = require('assert')
-  , Enricher = require('..')
+  , enrich = require('..')
   , CanonicalInput = require('..').CanonicalInput
   , fs = require('fs')
   ;
@@ -18,9 +18,8 @@ var canonicalInput = new CanonicalInput(fixtures)
 describe('when enriching CanonicalInput', function(){
   describe('and when using all enrichments', function(){
     it('should work', function(){
-      var enricher = new Enricher(canonicalInput)
-      var e = enricher.enrich()
-      // assert(e.event == 'page_view')
+      var e = enrich(canonicalInput)
+      assert(e.event == 'page_view')
       assert(e.app_id == 'example.com')
     })
   })
