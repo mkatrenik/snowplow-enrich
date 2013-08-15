@@ -1,6 +1,6 @@
 {
   "name": "snowplow-enrich",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "event enrichments module for snowplow analytics",
   "main": "index.js",
   "repository": "git@github.com:mkatrenik/snowplow-enrich",
